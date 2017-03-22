@@ -26,7 +26,7 @@ while True:
 
     print(msg)
     while msg != 'Ok bye': # 'Ok bye' is a message sent by the server
-        client_response = input()
+        client_response = 'Client: '+ input()
 
         s.send(client_response.encode('ascii'))
         msg = s.recv(4000).decode('ascii')
