@@ -21,9 +21,9 @@ while True:
 
     result = clientsocket.recv(1024).decode('ascii')
     print(result)
-    while result != 'quit': # 'quit' is the message sent by the client
+    while result != 'Client: quit': # 'quit' is the message sent by the client
 
-        msg1 = 'Anything else?'
+        msg1 = 'server: '+ input()
         clientsocket.send(msg1.encode('ascii'))
         result = clientsocket.recv(1024).decode('ascii')
         print(result)
